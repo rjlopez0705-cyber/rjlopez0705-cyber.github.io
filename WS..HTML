@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Exercise 3 - HTML Forms</title>
+    <style>
+        body { font-family: sans-serif; margin: 40px; }
+        
+        .main-heading { color: #cc9900; font-family: serif; font-size: 28px; }
+        
+        fieldset { border: 1px solid #ccc; width: 600px; padding: 20px; }
+        legend { color: blue; font-size: 0.9em; padding: 0 5px; }
+        
+        table { border-collapse: collapse; }
+        td { padding: 5px; vertical-align: top; font-size: 14px; }
+        .label-cell { text-align: right; width: 121px; padding-right: 15px; }
+        
+        input[type="text"], input[type="email"], input[type="password"], textarea, select {
+            border: 1px solid #888;
+            width: 200px;
+        }
+        textarea { width: 250px; height: 120px; }
+    </style>
+</head>
+<body>
+
+    <h1 class="main-heading">How can we help?</h1>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Request for Proposal</legend>
+            
+            <table>
+                <tr>
+                    <td class="label-cell">Your name:</td>
+                    <td><input type="text" name="client_name"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Email:</td>
+                    <td><input type="email" name="client_email"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Username:</td>
+                    <td><input type="text" name="user_id"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Password:</td>
+                    <td><input type="password" name="user_pass"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Your Business:</td>
+                    <td>
+                        <textarea name="business_info">Briefly describe your business in this space</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Company size:</td>
+                    <td>
+                        <input type="radio" name="size" value="10"> Less than 10<br>
+                        <input type="radio" name="size" value="50"> 11 to 50<br>
+                        <input type="radio" name="size" value="200"> 50 to 200<br>
+                        <input type="radio" name="size" value="over"> Over 200
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Service:</td>
+                    <td>
+                        <input type="checkbox" name="svc" value="brand"> Brand Identity
+                        <input type="checkbox" name="svc" value="new"> New Website
+                        <input type="checkbox" name="svc" value="redesign"> Web Redesigner
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Timeline:</td>
+                    <td>
+                        <select name="period">
+                            <option value="now">Immediately</option>
+                            <option value="1-2w">1-2 weeks</option>
+                            <option value="3-6w">3-6 weeks</option>
+                            <option value="2m">7 - 2 months</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Send to devidesign">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
+</body>
+</html>
+
